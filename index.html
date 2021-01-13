@@ -10,7 +10,7 @@
  
  
  
- <title>test</title>
+ <title>LPWidget</title>
  
  <style>
 
@@ -35,20 +35,8 @@
               
                 var onSuccess = function(data) {
 			
-
-			
                     // Do something with the returning data
-			if(data.includes("whatsapp")){
-				// window.location.replace("https://marcodagolini.github.io/widgetfw/");
-				window.location.replace("https://ts-emea-fastweb-agentwidget.stg.fs.liveperson.com/");
-				// myURL = "https://ts-emea-fastweb-agentwidget.stg.fs.liveperson.com/"
-			}
-			else {
-				// window.location.replace("https://marcodagolini.github.io/widgetfw/");
-				window.location.replace("https://ts-emea-fastweb-datawidget.dev.fs.liveperson.com");
-				// myURL = "https://ts-emea-fastweb-datawidget.dev.fs.liveperson.com/"
-			}
-			
+			console.log(data);
 			/****
 			var iframe = document.createElement('iframe');
 			iframe.src = myURL;
@@ -65,7 +53,7 @@
                 };
                 
              
-                SDK.get('authenticatedData.customerDetails.customerId', onSuccess, onError);               
+                SDK.get('chatInfo.rtSessionId', onSuccess, onError);               
               
             });
 
